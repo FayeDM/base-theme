@@ -1,0 +1,33 @@
+{
+	"name": "think-shift",
+	"version": "0.0.2",
+	"description": "A starter theme for modern WordPress developers.",
+	"author": "BlockTheme Contributors",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"wordpress",
+		"starter",
+		"theme"
+	],
+	"homepage": "https://github.com/bacoords/think-shift#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bacoords/think-shift.git"
+	},
+	"bugs": {
+		"url": "https://github.com/bacoords/think-shift/issues"
+	},
+	"main": "index.js",
+	"devDependencies": {
+		"@wordpress/prettier-config": "^3.12.0",
+		"@wordpress/scripts": "^27.6.0",
+		"glob": "^8.1.0",
+		"remove-files-webpack-plugin": "^1.5.0"
+	},
+	"scripts": {
+		"build": "wp-scripts build --config ./bin/webpack.config.js --webpack-src-dir=src/blocks",
+		"create-block": "cd ./src/blocks && npx @wordpress/create-block --namespace=think-shift --no-plugin",
+		"create-block:dynamic": "cd ./src/blocks && npx @wordpress/create-block --namespace=think-shift --no-plugin --variant=dynamic",
+		"start": "wp-scripts start --config ./bin/webpack.config.js --webpack-src-dir=src/blocks"
+	}
+}
