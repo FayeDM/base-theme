@@ -26,6 +26,7 @@ if ( ! empty( $block['className'] ) ) {
 // Applies WP alignment classes
 if ( ! empty( $block['align'] ) ) {
     $classes .= ' align' . $block['align'];
+    $classes .= ' is-layout-constrained';
 }
 
 // Append theme.js color palette
@@ -67,6 +68,5 @@ $classes .= think_shift_get_color_classes( $block );
         <li><a href="https://github.com/WordPress/gutenberg/blob/trunk/packages/block-editor/src/components/inner-blocks/README.md">InnerBlocks Git README</a></li>
         <li><a href="https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/nested-blocks-inner-blocks/">WP Resources for InnerBlocks</a></li>
     </ul>
-
 
 </div>

@@ -2,7 +2,6 @@
     "name": "acf-blocks/sample",
     "title": "Sample",
     "description": "A Sample Block demonstrating set up and features for developer reference only",
-    "style": [ "file:./styles.css" ],
     "script": [ "file:./scripts.js" ],
     "category": "think-shift-theme-blocks",
     "icon": "warning",
@@ -19,5 +18,8 @@
             "background": true,
             "link": true
         }
-    }
+    },
+	"editorScript": "file:index.js",
+	"editorStyle": "file:index.css",
+	"style": "file:style-index.css"
 }

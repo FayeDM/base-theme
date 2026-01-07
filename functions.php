@@ -19,8 +19,14 @@ require_once get_template_directory() . '/inc/setup.php';
  */
 require_once get_template_directory() . '/inc/enqueue.php';
 
+/**
+ * Enqueue blocks related scripts, styles, and functionality.
+ */
+require_once get_template_directory() . '/inc/enqueue-blocks.php';
+
 
 /**
  * Enqueue ACF related blocks, and scripts.
  */
 require_once get_template_directory() . '/inc/acf-functions.php';
+

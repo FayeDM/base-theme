@@ -22,6 +22,7 @@ function getEntries(options) {
 		include = "*.scss",
 		outputFolder = "css",
 		blockDir = false,
+		blockNameFn = null, // <-- NEW PROPERTY
 	} = options;
 	// get all root scss files in the src/scss folder
 	const entries = glob.sync(root + "/" + include);
@@ -32,8 +33,8 @@ function getEntries(options) {
 		if ("index" === path.parse(entry).name) return acc;
 		const outputDir = "../" + outputFolder + "/";
 		const name = blockDir
-			? getBlockStylesheetName(entry)
-			: path.parse(entry).name;
+			? (options.blockNameFn ? options.blockNameFn(entry) : getBlockStylesheetName(entry))
+    		: path.parse(entry).name;
 		acc[outputDir + name] = path.resolve(entry);
 		return acc;
 	}, {});

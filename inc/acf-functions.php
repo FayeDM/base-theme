@@ -19,7 +19,7 @@ if ( function_exists('acf_register_block_type') ) {
          *
          * @link https://developer.wordpress.org/reference/functions/register_block_type/
          */
-        $blocks_dir = get_template_directory() . '/blocks';
+        $blocks_dir = get_template_directory() . '/src/blocks';
 
         $enable_sample_block = true; // toggle to enable sample block
 
