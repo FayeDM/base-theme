@@ -1,10 +1,10 @@
 {
     "key": "group_695c1243461ad",
-    "title": "Sample",
+    "title": "Custom Block Instructions",
     "fields": [
         {
             "key": "field_695c12437071f",
-            "label": "Sample",
+            "label": "Block Instructions",
             "name": "",
             "aria-label": "",
             "type": "message",
@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Hello!",
+            "message": "To toggle between preview and edit use the eye \/ pencil icon in this block's associated toolbar. If this block has an InnerBlock section, that will be usable from preview.\r\n\r\nYou can also find additional settings within the side bar.",
             "new_lines": "wpautop",
             "esc_html": 0
         }
@@ -24,13 +24,13 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "post"
+                "value": "all"
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 1000,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -40,5 +40,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1767641682
+    "modified": 1767894981
 }

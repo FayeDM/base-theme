@@ -26,7 +26,6 @@ if ( ! empty( $block['className'] ) ) {
 // Applies WP alignment classes
 if ( ! empty( $block['align'] ) ) {
     $classes .= ' align' . $block['align'];
-    $classes .= ' is-layout-constrained';
 }
 
 // Append theme.js color palette

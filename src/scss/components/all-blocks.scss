@@ -1,0 +1,26 @@
+/* Global Block Styles */
+
+.block {
+    &.has-background {
+        padding: 20px;
+    }
+}
+
+
+
+/* Core Blocks */
+
+.wp-block-group {
+	// padding added for parity with the block editor
+	padding-bottom: 0;
+	padding-top: 0;
+	&.is-selected,
+	&.has-child-selected {
+		padding-bottom: 1.25em;
+	}
+}
+
+.wp-block-quote {
+	border-left: 2px solid var(--wp--preset--color--primary);
+	padding-left: var(--wp--preset--spacing--50);
+}

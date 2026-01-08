@@ -40,8 +40,24 @@ function theme_setup() {
 
 	// Enqueue your editor CSS
 	add_editor_style('css/editor.css'); // adjust path if needed
+
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\theme_setup' );
+
+
+add_action( 'admin_menu', function() {
+    remove_submenu_page( 'themes.php', 'site-editor.php' );
+} );
+add_action( 'admin_bar_menu', function($wp_admin_bar) {
+    $wp_admin_bar->remove_node( 'site-editor' );
+}, 250 );
+add_action( 'admin_init', function() {
+    global $pagenow;
+    if ( 'site-editor.php' === $pagenow ) {
+        wp_safe_redirect( admin_url() );
+        exit();
+    }
+} );
 
 /**
  * Custom login logo
@@ -90,3 +106,4 @@ function custom_login_link() {
 	return home_url();
 }
 add_filter( 'login_headerurl', __NAMESPACE__ . '\custom_login_link' );
+

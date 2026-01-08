@@ -21,19 +21,12 @@ if ( function_exists('acf_register_block_type') ) {
          */
         $blocks_dir = get_template_directory() . '/src/blocks';
 
-        $enable_sample_block = true; // toggle to enable sample block
-
         $block_folders = glob( $blocks_dir . '/*', GLOB_ONLYDIR );
 
         foreach ( $block_folders as $block_path ) {
             $folder_name = basename( $block_path );
 
             if ( preg_match('/^[_\.]/', $folder_name) ) continue;
-
-            if ( $folder_name === 'sample' && ! $enable_sample_block ) {
-                error_log("Skipping registration of sample block.");
-                continue;
-            }
 
             $block_json = $block_path . '/block.json';
             if ( file_exists( $block_json ) ) {
@@ -66,6 +59,77 @@ add_filter( 'block_categories_all', function( $categories ) {
 
 
 /**
+ * Filters the list of allowed block types in the block editor.
+ *
+ * This function restricts the available block types to the ones we want to be available.
+ * It appends our custom ACF blocks.
+ * More blocks can be added as needed, see:
+ * https://developer.wordpress.org/block-editor/reference-guides/core-blocks/
+ *
+ * @param array|bool $allowed_block_types Array of block type slugs, or boolean to enable/disable all.
+ * @param object     $block_editor_context The current block editor context.
+ *
+ * @return array The array of allowed block types.
+ */
+function think_shift_allowed_block_types( $allowed_block_types, $block_editor_context ) {
+
+	$allowed_block_types = array(
+    'core/paragraph',
+    'core/image',
+    'core/heading',
+    'core/quote',
+    'core/list',
+    'core/separator',
+    'core/pullquote',
+    'core/code',
+    'core/html',
+    'core/spacer',
+    'core/file',    
+    'core/cover',
+    'core/column',
+    'core/columns',  
+    'core/video',
+    'core/audio',
+    'core/group',
+    'core/cover',
+    'core/media-text',
+    'core/details'
+	);
+
+    $blocks_dir = get_template_directory() . '/src/blocks';
+
+    $enable_sample_block = true; // toggle to enable sample block
+
+    $block_folders = glob( $blocks_dir . '/*', GLOB_ONLYDIR );
+
+    foreach ( $block_folders as $block_path ) {
+        $folder_name = basename( $block_path );
+
+        if ( preg_match('/^[_\.]/', $folder_name) ) continue;
+
+        if ( $folder_name === 'sample' && ! $enable_sample_block ) {
+            continue;
+        }
+
+        $block_json = $block_path . '/block.json';
+        if ( file_exists( $block_json ) ) {
+            // Read block.json to get the block name
+            $block_data = json_decode( file_get_contents( $block_json ), true );
+            if ( isset( $block_data['name'] ) && ! in_array( $block_data['name'], $allowed_block_types, true ) ) {
+                $allowed_block_types[] = $block_data['name'];
+            }
+        }
+    }
+
+	return $allowed_block_types;
+}
+add_filter( 'allowed_block_types_all', 'think_shift_allowed_block_types', 10, 2 );
+
+
+
+
+
+/**
  * Append color classes for a block.
  *
  * @param array $block The ACF block array.
@@ -88,4 +152,21 @@ function think_shift_get_color_classes( $block ) {
     }
 
     return $classes;
+}
+
+
+/**
+ * Extract the chosen style class from the block wrapper attributes.
+ *
+ * @param array $block The $block array passed to render_callback.
+ * @return string|null The style class (like 'is-style-fancy') or null if none.
+ */
+function think_shift_style( $block ) {
+    $wrapper = get_block_wrapper_attributes( $block );
+
+    if ( preg_match( '/\bis-style-[^\s"]+/', $wrapper, $matches ) ) {
+        return $matches[0];
+    }
+
+    return null;
 }

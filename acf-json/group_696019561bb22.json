@@ -1,0 +1,64 @@
+{
+    "key": "group_696019561bb22",
+    "title": "Button",
+    "fields": [
+        {
+            "key": "field_696019561761b",
+            "label": "Button",
+            "name": "button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Link text will be used as the button text, url will be used as the button link.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_696019951761c",
+            "label": "Screen Reader Text",
+            "name": "screen_reader_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "If your link has a generic name such as \"read more\", \"view\", \"get started\" etc., please add some quantifying text. It will be hidden within your button for assistive technologies.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf-blocks\/button"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "modified": 1767905897
+}

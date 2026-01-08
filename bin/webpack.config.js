@@ -4,7 +4,7 @@ const path = require("path");
 const { getEntries } = require("./get-entries");
 // styleOutputFolder should be relative to the root of the theme with no leading or trailing slashes
 const styleOutputFolder = "css";
-const blocksOutputFolder = "blocks";
+
 /**
  * Custom Webpack Configuration
  *
@@ -22,23 +22,13 @@ var config = {
 			include: "*.scss",
 			outputFolder: styleOutputFolder,
 		}),
-		...getEntries({
-			root: "src/scss/blocks",
-			include: "**/*.scss",
-			outputFolder: styleOutputFolder,
-			blockDir: true,
-		}),
-		...getEntries({
-			root: "src/blocks",
-			include: "**/style.scss",  
-			outputFolder: blocksOutputFolder, 
-			blockDir: true,   
-			blockNameFn: (filePath) => {
-				const block = path.basename(path.dirname(filePath));
-				return `/${block}/style`;
-			}
-           
-		}),
+		// Core block styles currently bundled globally by design — see components/_all-blocks.scss
+		// ...getEntries({
+		// 	root: "src/scss/blocks",
+		// 	include: "**/*.scss",
+		// 	outputFolder: styleOutputFolder,
+		// 	blockDir: true,
+		// }),
 	},
 	output: {
 		...defaultConfig.output,
