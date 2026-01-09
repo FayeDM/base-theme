@@ -5,19 +5,14 @@
     "script": [ "file:./scripts.js" ],
     "category": "think-shift-theme-blocks",
     "icon": "button",
-    "keywords": ["button", "buttons"],
+    "keywords": ["button", "buttons", "link"],
     "acf": {
         "mode": "edit",
         "renderTemplate": "block.php"
     },
     "supports": {
-        "anchor": true,
-        "align": [ "left", "center", "right" ]
+        "anchor": true
     },
-    "styles": [
-        { "name": "primary", "label": "Primary", "isDefault": true },
-        { "name": "secondary", "label": "Secondary" }
-    ],
 	"editorScript": "file:index.js",
 	"editorStyle": "file:index.css",
 	"style": "file:style-index.css"

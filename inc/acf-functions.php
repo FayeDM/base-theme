@@ -154,19 +154,3 @@ function think_shift_get_color_classes( $block ) {
     return $classes;
 }
 
-
-/**
- * Extract the chosen style class from the block wrapper attributes.
- *
- * @param array $block The $block array passed to render_callback.
- * @return string|null The style class (like 'is-style-fancy') or null if none.
- */
-function think_shift_style( $block ) {
-    $wrapper = get_block_wrapper_attributes( $block );
-
-    if ( preg_match( '/\bis-style-[^\s"]+/', $wrapper, $matches ) ) {
-        return $matches[0];
-    }
-
-    return null;
-}

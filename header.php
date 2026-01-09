@@ -21,7 +21,7 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
-    <header>
+    <header class="site-header">
         <div class="is-layout-constrained">
             <p>My Header</p>
         </div>

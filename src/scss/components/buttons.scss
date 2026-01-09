@@ -1,12 +1,12 @@
 .btn {
     transition: all 0.2s ease;
     display: inline-block;
-    padding: 20px 30px;
+    padding: 10px 20px;
     text-decoration: none;
     border: 5px solid black;
     font-weight: bold;
 
-    &.is-style-primary {
+    &--primary {
         background-color: black;
         color: white;
 
@@ -16,7 +16,7 @@
         }
     }
 
-    &.is-style-secondary {
+    &--secondary {
         background-color: white;
         color: black;
 

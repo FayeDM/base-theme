@@ -3,7 +3,16 @@
 .block {
     &.has-background {
         padding: 20px;
-    }
+	}
+
+	&--inner-center {
+		text-align: center;
+	}
+
+	&--inner-right {
+		text-align: right;
+	}
+
 }
 
 

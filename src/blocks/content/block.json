@@ -1,0 +1,25 @@
+{
+    "name": "acf-blocks/content",
+    "title": "Content Section",
+    "description": "A content section with predefined heading, paragraph, and link.",
+    "script": [ "file:./scripts.js" ],
+    "category": "think-shift-theme-blocks",
+    "icon": "text-page",
+    "keywords": ["content", "heading", "paragraph", "button"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "block.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": [ "wide", "full" ],
+        "color": {
+            "text": true,
+            "background": true,
+            "link": true
+        }
+    },
+	"editorScript": "file:index.js",
+	"editorStyle": "file:index.css",
+	"style": "file:style-index.css"
+}
