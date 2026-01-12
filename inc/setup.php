@@ -45,6 +45,9 @@ function theme_setup() {
 add_action( 'after_setup_theme', __NAMESPACE__ . '\theme_setup' );
 
 
+/**
+ * Removes Block Theme Design in Admin
+ */
 add_action( 'admin_menu', function() {
     remove_submenu_page( 'themes.php', 'site-editor.php' );
 } );
@@ -107,3 +110,15 @@ function custom_login_link() {
 }
 add_filter( 'login_headerurl', __NAMESPACE__ . '\custom_login_link' );
 
+/**
+ * Create Default Menus.
+ */
+function think_shift_register_menus() {
+    register_nav_menus([
+        'main_menu' => __('Main Menu', 'think-shift'),
+        'utility_menu' => __('Utility Menu', 'think-shift'),
+		'footer_menu' => __('Footer Menu', 'think-shift'),
+		'legal_menu' => __('Legal Menu', 'think-shift'),
+    ]);
+}
+add_action('after_setup_theme', __NAMESPACE__ . '\think_shift_register_menus');

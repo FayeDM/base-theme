@@ -1,0 +1,65 @@
+// ============================================================
+// THEME VARIABLES REFERENCE
+// ------------------------------------------------------------
+// SCSS-friendly map to CSS custom properties.
+// Editing these properties needs to be done in theme.json.
+// Please update comments if variable values are changed.
+//
+// Additional variables can be created below.
+// ============================================================
+
+
+// Colors
+// -------------------------
+$color-background: var(--wp--preset--color--background); // #FEFEFE
+$color-foreground: var(--wp--preset--color--foreground); // #181A1F
+$color-primary: var(--wp--preset--color--primary);       // #3858e9
+$color-secondary: var(--wp--preset--color--secondary);   // #7b90ff
+
+
+// Spacing
+// -------------------------
+$spacing-20: var(--wp--preset--spacing--20); // 2X-Small
+$spacing-30: var(--wp--preset--spacing--30); // X-Small
+$spacing-40: var(--wp--preset--spacing--40); // Small
+$spacing-50: var(--wp--preset--spacing--50); // Medium
+$spacing-60: var(--wp--preset--spacing--60); // Large
+$spacing-70: var(--wp--preset--spacing--70); // X-Large
+$spacing-80: var(--wp--preset--spacing--80); // 2X-Large
+
+// Gaps & Containers
+$block-gap: var(--wp--custom--block-gap); // 1.5rem
+// Container is set in layout properties of theme.json
+// They should be edited there and are applied to content
+// inside the class .is-layout-constrained
+// Default is contentSize, nesting .alignwide inside 
+// .is-layout-constrained will apply the wideSize container
+
+
+
+// Typography
+// -------------------------
+$font-ebgaramond: var(--wp--preset--font-family--ebgaramond); // H: EB Garamond
+$font-inter: var(--wp--preset--font-family--inter);           // Paragraph/body font
+
+// Font sizes (fluid)
+$font-sm: var(--wp--preset--font-size--sm);                 // Small
+$font-paragraph: var(--wp--preset--font-size--paragraph);   // Paragraph
+$font-h6: var(--wp--preset--font-size--h6);                 // 1.56rem
+$font-h5: var(--wp--preset--font-size--h5);                 // 1.95rem
+$font-h4: var(--wp--preset--font-size--h4);                 // 2.44rem
+$font-h3: var(--wp--preset--font-size--h3);                 // 3.05rem
+$font-h2: var(--wp--preset--font-size--h2);                 // 3.82rem 
+$font-h1: var(--wp--preset--font-size--h1);                 // 5.96rem 
+$font-large: var(--wp--preset--font-size--large);           // 4.77rem
+
+
+
+// ==========================================================
+// ADDITIONAL VARIABLES
+// ------------------------------------------------------------
+// This file contains additional variables used within the site.
+// Some variables, particularly color and font related, should be
+// in theme.json. Please create them there, then add them to the above.
+//
+// ============================================================

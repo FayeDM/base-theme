@@ -1,4 +1,9 @@
 .site-header {
-    border-bottom: 5px solid black;
-    min-height: 150px;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+            min-height: 150px;
+    }
 }

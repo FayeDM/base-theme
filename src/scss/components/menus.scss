@@ -1,0 +1,37 @@
+@use "../utils" as *;
+
+.nav {
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &--utility {
+        font-size: $font-sm;
+        justify-self: right; 
+
+        .nav-menu {
+            display: flex;
+            gap: $spacing-20;
+        }
+    }
+
+    &--main {
+        justify-self: right;
+        
+        .nav-menu {
+            display: flex;
+            gap: $spacing-50;
+        }  
+    }
+
+    &--footer {
+
+    }
+
+    &--legal {
+
+    }
+}

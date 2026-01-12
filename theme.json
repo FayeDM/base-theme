@@ -365,27 +365,5 @@
       "lineHeight": "1.6"
     }
   },
-  "templateParts": [
-    {
-      "name": "header",
-      "title": "Header",
-      "area": "header"
-    },
-    {
-      "name": "footer",
-      "title": "Footer Credit Area",
-      "area": "footer"
-    },
-    {
-      "name": "comments",
-      "title": "Comments",
-      "area": "uncategorized"
-    },
-    {
-      "name": "post-meta",
-      "title": "Post Meta",
-      "area": "uncategorized"
-    }
-  ],
   "version": 2
 }
