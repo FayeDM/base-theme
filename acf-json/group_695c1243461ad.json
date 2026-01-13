@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "To toggle between preview and edit use the eye \/ pencil icon in this block's associated toolbar. If this block has an InnerBlock section, that will be usable from preview.\r\n\r\nYou can also find additional settings within the side bar.",
+            "message": "To toggle between preview and edit use the eye \/ pencil icon in this block's associated toolbar.",
             "new_lines": "wpautop",
             "esc_html": 0
         }
@@ -40,5 +40,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1767894981
+    "modified": 1768325213
 }

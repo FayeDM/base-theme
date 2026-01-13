@@ -1,28 +1,30 @@
+@use "../utils" as *;
+
 .btn {
     transition: all 0.2s ease;
     display: inline-block;
-    padding: 10px 20px;
+    padding: $spacing-20 $spacing-30;
     text-decoration: none;
-    border: 5px solid black;
+    border: 5px solid $color-foreground;
     font-weight: bold;
 
     &--primary {
-        background-color: black;
-        color: white;
+        background-color: $color-foreground;
+        color: $color-background;
 
         &:hover, & :focus {
-           background-color: white;
-           color: black; 
+           background-color: $color-background;
+           color: $color-foreground; 
         }
     }
 
     &--secondary {
-        background-color: white;
-        color: black;
+        background-color: $color-background;
+        color: $color-foreground;
 
         &:hover, & :focus {
-           background-color: black;
-           color: white; 
+           background-color: $color-foreground;
+           color: $color-background; 
         }
     }
 }

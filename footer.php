@@ -3,8 +3,8 @@
 ?>
 
     <footer class="site-footer is-layout-constrained">
-        <div class="alignwide">
-            <div class="footer-left">
+        <div class="site-footer__content alignwide">
+            <div class="site-footer__left">
                 <?php if ( has_nav_menu( 'footer_menu' ) ) { ?>
                     <nav class="nav nav--footer" aria-label="Footer">
                         <?php
@@ -32,11 +32,11 @@
                     </nav>
                 <?php } ?> 
             </div>
-            <div class="footer-right">
-               Logo / Contact / Social Media
+            <div class="site-footer__right">
+               Logo </br> Contact </br> Social Media
             </div>
-            <div class="footer-copyright">
-                Copyright
+            <div class="site-footer__copyright">
+                <?php echo date("Y"); ?> &copy; <?php the_field( 'copyright_line', 'option' ); ?>
             </div>
         </div>
     </footer>

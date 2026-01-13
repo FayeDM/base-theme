@@ -10,7 +10,8 @@
 
     &--utility {
         font-size: $font-sm;
-        justify-self: right; 
+        justify-self: right;
+        padding-bottom: $spacing-30;
 
         .nav-menu {
             display: flex;
@@ -28,10 +29,24 @@
     }
 
     &--footer {
+        margin-bottom: $spacing-30;
 
+        .nav-menu {
+            columns: 2;
+            column-gap: $spacing-80;
+
+            li {
+                padding: $spacing-20 0;
+            }
+        }
     }
 
     &--legal {
+        font-size: $font-sm;
 
+        .nav-menu {
+            display: flex;
+            gap: $spacing-20;
+        }
     }
 }
