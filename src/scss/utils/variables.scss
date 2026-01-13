@@ -39,10 +39,10 @@ $block-gap: var(--wp--custom--block-gap); // 1.5rem
 
 // Typography
 // -------------------------
-$font-ebgaramond: var(--wp--preset--font-family--ebgaramond); // H: EB Garamond
-$font-inter: var(--wp--preset--font-family--inter);           // Paragraph/body font
+$font-accent: var(--wp--preset--font-family--ebgaramond); // H: EB Garamond
+$font-main: var(--wp--preset--font-family--inter);           // Paragraph/body font
 
-// Font sizes (fluid)
+// Font sizes (fluid)s
 $font-sm: var(--wp--preset--font-size--sm);                 // Small
 $font-paragraph: var(--wp--preset--font-size--paragraph);   // Paragraph
 $font-h6: var(--wp--preset--font-size--h6);                 // 1.56rem

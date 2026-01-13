@@ -1,0 +1,36 @@
+// import utilities if needed
+
+.block--testimonial {
+
+    figure {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+    }
+
+    .testimonial__image {
+        margin-top: 1em;
+        width: 150px;
+        margin-right: 30px;
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    blockquote {
+        margin: 0;
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    figcaption { grid-area: 2 / 2 / 3 / 3; }
+
+    cite {
+        font-size: 1rem;
+        font-style: normal;
+        span {
+            display: block;
+            font-size: 0.8rem;
+            font-style: italic;
+        }
+    }
+}

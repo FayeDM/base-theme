@@ -1,0 +1,19 @@
+{
+    "name": "acf-blocks/testimonal",
+    "title": "Testimonial",
+    "description": "Testimonial from a client or employee.",
+    "script": [ "file:./scripts.js" ],
+    "category": "think-shift-theme-blocks",
+    "icon": "format-chat",
+    "keywords": ["testimonial", "quote"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "block.php"
+    },
+    "supports": {
+        "anchor": true
+    },
+	"editorScript": "file:index.js",
+	"editorStyle": "file:index.css",
+	"style": "file:style-index.css"
+}
