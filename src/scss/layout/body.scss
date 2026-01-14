@@ -1,2 +1,18 @@
-// @use "../utils" as *;
+@use "../utils" as *;
 
+.skip-to {
+    @include visually-hidden();
+}
+
+.site-container {
+    padding: 0 $spacing-40;
+
+    // Apply alignfull to a block or area
+    // to break out of the container
+    .alignfull, 
+    .alignwide {
+        width: 100vw;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+}

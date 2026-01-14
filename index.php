@@ -9,23 +9,20 @@
  * @package Think Shift
  */
 
-get_header(); 
-?>
+get_header(); ?>
 
-<main id="main-content" class="is-layout-constrained">
+    <?php
+        if ( have_posts() ) :
+            while ( have_posts() ) :
+                the_post();
 
-<?php
+                get_template_part( 'partials/content', '' ); 
 
-    if ( have_posts() ) :
-        while ( have_posts() ) : the_post();
-            get_template_part( 'templates/content', '' );
-        endwhile;
-    endif;
+            endwhile;
 
-    ?>
+        else :
+            // Code for when no posts are found (e.g., a "not found" message)
+        endif;
+        ?>
 
-</main>   
-
-<?php
-get_footer(); 
-?>
+<?php get_footer(); ?>

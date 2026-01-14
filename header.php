@@ -20,9 +20,10 @@
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
+    <a href="#main-content" class="skip-to">Skip to main content</a>
 
     <header class="site-header is-layout-constrained">
-        <div class="site-header__content alignwide">
+        <div class="site-container site-header__content">
             <div class="logo">
                 logo
             </div>
@@ -56,3 +57,6 @@
             </div>
         </div>
     </header>
+
+    <main id="main-content" class="site-main is-layout-constrained">
+        <div class="site-container">

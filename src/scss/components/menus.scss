@@ -10,30 +10,45 @@
 
     &--utility {
         font-size: $font-sm;
-        justify-self: right;
         padding-bottom: $spacing-30;
 
+        @include breakpoint(sm) {
+            justify-self: right;
+        }
+
         .nav-menu {
-            display: flex;
-            gap: $spacing-20;
+
+            @include breakpoint(sm) {
+                display: flex;
+                gap: $spacing-20;
+            }
         }
     }
 
     &--main {
-        justify-self: right;
         
+        @include breakpoint(sm) {
+            justify-self: right;
+        } 
+
         .nav-menu {
-            display: flex;
-            gap: $spacing-50;
-        }  
+
+            @include breakpoint(sm) {
+                display: flex;
+                gap: $spacing-20;
+            }
+        }
     }
 
     &--footer {
         margin-bottom: $spacing-30;
 
         .nav-menu {
-            columns: 2;
-            column-gap: $spacing-80;
+
+            @include breakpoint(xs) {
+                columns: 2;
+                column-gap: $spacing-80;
+            }
 
             li {
                 padding: $spacing-20 0;

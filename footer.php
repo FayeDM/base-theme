@@ -2,8 +2,11 @@
 // footer.php
 ?>
 
+        </div><!-- .site-container -->
+    </main><!-- .site-main -->
+
     <footer class="site-footer is-layout-constrained">
-        <div class="site-footer__content alignwide">
+        <div class="site-container site-footer__content">
             <div class="site-footer__left">
                 <?php if ( has_nav_menu( 'footer_menu' ) ) { ?>
                     <nav class="nav nav--footer" aria-label="Footer">

@@ -5,26 +5,26 @@
     display: inline-block;
     padding: $spacing-20 $spacing-30;
     text-decoration: none;
-    border: 5px solid $color-foreground;
+    border: 5px solid $color-black;
     font-weight: bold;
 
     &--primary {
-        background-color: $color-foreground;
-        color: $color-background;
+        background-color: $color-black;
+        color: $color-white;
 
         &:hover, & :focus {
-           background-color: $color-background;
-           color: $color-foreground; 
+           background-color: $color-white;
+           color: $color-black; 
         }
     }
 
     &--secondary {
-        background-color: $color-background;
-        color: $color-foreground;
+        background-color: $color-white;
+        color: $color-black;
 
         &:hover, & :focus {
-           background-color: $color-foreground;
-           color: $color-background; 
+           background-color: $color-black;
+           color: $color-white; 
         }
     }
 }

@@ -1,11 +1,15 @@
-// @use "../utils" as *;
+@use "../utils" as *;
 
 .site-header {
 
     &__content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+
+        @include breakpoint(sm) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             min-height: 150px;
+        }
+        
     }
 }

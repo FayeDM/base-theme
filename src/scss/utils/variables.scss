@@ -9,15 +9,17 @@
 // ============================================================
 
 
-// Colors
+// Colors - around line 12 of theme.json
 // -------------------------
-$color-background: var(--wp--preset--color--background); // #FEFEFE
-$color-foreground: var(--wp--preset--color--foreground); // #181A1F
-$color-primary: var(--wp--preset--color--primary);       // #3858e9
-$color-secondary: var(--wp--preset--color--secondary);   // #7b90ff
+$color-white: var(--wp--preset--color--white);      // #FEFEFE
+$color-black: var(--wp--preset--color--black);      // #181A1F
+$color-primary: var(--wp--preset--color--primary);  // #3858e9
+$color-alt-1: var(--wp--preset--color--alt-1);      // #6de8e8
+$color-alt-2: var(--wp--preset--color--alt-2);      // #f5501d
+$color-alt-3: var(--wp--preset--color--alt-3);      // #bd0068
 
 
-// Spacing
+// Spacing - around line 57 of theme.json
 // -------------------------
 $spacing-20: var(--wp--preset--spacing--20); // 2X-Small
 $spacing-30: var(--wp--preset--spacing--30); // X-Small
@@ -37,7 +39,7 @@ $block-gap: var(--wp--custom--block-gap); // 1.5rem
 
 
 
-// Typography
+// Typography around line 96 of theme.json
 // -------------------------
 $font-accent: var(--wp--preset--font-family--ebgaramond); // H: EB Garamond
 $font-main: var(--wp--preset--font-family--inter);           // Paragraph/body font

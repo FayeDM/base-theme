@@ -1,21 +1,26 @@
 @use "../utils" as *;
 
+
 .site-footer {
         margin-top: $spacing-60;
 
     &__content {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        display: block;
         padding: $spacing-30 0;
-        border-top: 1px solid $color-foreground;
+        border-top: 1px solid $color-black;
+
+        @include breakpoint(sm) {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
     }
 
     &__copyright {
         flex-basis: 100%;
         padding: $spacing-30 0;
         margin-top: $spacing-50;
-        border-top: 1px solid $color-foreground;
+        border-top: 1px solid $color-black;
         font-size: $font-sm;
     }
 }
