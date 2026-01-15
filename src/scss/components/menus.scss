@@ -81,3 +81,33 @@
         }
     }
 }
+
+
+
+#menu-toggle {
+    border: 2px solid $color-black;
+    background: none;
+    padding: $spacing-30;
+    font: inherit;
+
+    @include breakpoint(md) {
+        display: none;
+    }
+
+    .icon {
+    display: inline-block;
+    margin-left: $spacing-30;
+    }
+
+    &[aria-pressed=true] .icon {
+      transform: rotate(180deg);
+    } 
+
+    &[aria-pressed=false] + .nav--main {
+        display: none;
+
+        @include breakpoint(md) {
+            display: block;
+        }
+    }
+}

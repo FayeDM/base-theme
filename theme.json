@@ -369,9 +369,9 @@
       "blockGap": "var:custom|block-gap",
       "padding": {
         "top": "var:preset|spacing|30",
-        "right": "var:preset|spacing|20",
+        "right": "var:preset|spacing|40",
         "bottom": "var:preset|spacing|30",
-        "left": "var:preset|spacing|20"
+        "left": "var:preset|spacing|40"
       }
     },
     "typography": {

@@ -46,4 +46,17 @@ document.addEventListener('DOMContentLoaded', function () {
     li.addEventListener('mouseenter', () => li.classList.add('open'));
     li.addEventListener('mouseleave', () => li.classList.remove('open'));
   });
+
+    // Menu Toggle
+    const toggle = document.querySelector('#menu-toggle')
+
+    function toggleIsOpen() {
+      const currentState = toggle.getAttribute('aria-pressed')
+      toggle.setAttribute('aria-pressed', currentState === 'false')
+    }
+
+    toggle.addEventListener('click', toggleIsOpen)
+
+
+
 });

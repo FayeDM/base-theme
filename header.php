@@ -41,6 +41,10 @@
                         ?>
                     </nav>
                     <?php } ?>
+                <button id="menu-toggle" aria-pressed="false">
+                    Menu
+                    <span aria-hidden="true" class="icon">▼</span>
+                </button>
                 <?php if ( has_nav_menu( 'main_menu' ) ) { ?>
                     <nav class="nav nav--main" aria-label="Main">
                         <?php

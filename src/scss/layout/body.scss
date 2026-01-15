@@ -6,12 +6,15 @@
 
 .site-container {
     padding: 0 $spacing-40;
+    // Change overall left and right padding here, 
+    // and in theme.json the spacing around line 370
+    // also adjust the calc below
 
     // Apply alignfull to a block or area
     // to break out of the container
     .alignfull, 
     .alignwide {
-        width: 100vw;
+        width: calc(100vw - 15px);
         margin-left: 50%;
         transform: translateX(-50%);
     }
