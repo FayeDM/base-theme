@@ -57,6 +57,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     toggle.addEventListener('click', toggleIsOpen)
 
+});
 
 
+
+// External Link cleanup
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[target="_blank"]').forEach(link => {
+        // Add rel
+        const rels = new Set((link.getAttribute('rel') || '').split(' ').filter(Boolean));
+        rels.add('noopener');
+        rels.add('noreferrer');
+        link.setAttribute('rel', Array.from(rels).join(' '));
+
+        // Append visually hidden span
+        const span = document.createElement('span');
+        span.className = 'visually-hidden';
+        span.textContent = 'Opens in a new window';
+        link.appendChild(span);
+    });
 });
