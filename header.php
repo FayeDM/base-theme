@@ -48,8 +48,9 @@
                                 'theme_location' => 'main_menu',
                                 'container'      => 'false',            
                                 'menu_class'     => 'nav-menu',   
-                                'depth'          => 1,              
+                                'depth'          => 2,              
                                 'fallback_cb'    => false, 
+                                'walker'         => new Accessible_Nav_Walker(),
                             ]);
                         ?>
                     </nav>

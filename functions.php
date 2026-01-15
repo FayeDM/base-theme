@@ -33,3 +33,8 @@ require_once get_template_directory() . '/inc/acf-functions.php';
  * Enqueue General scripts.
  */
 require_once get_template_directory() . '/inc/general.php';
+
+/**
+ * Enqueue Accessible Nav Walker.
+ */
+require get_template_directory() . '/inc/class-accessible-nav-walker.php';

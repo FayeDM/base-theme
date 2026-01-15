@@ -1,11 +1,16 @@
 @use "../utils" as *;
 
+
 .nav {
 
     ul {
         margin: 0;
         padding: 0;
         list-style: none;
+
+        li {
+            position: relative;
+        }
     }
 
     &--utility {
@@ -36,6 +41,17 @@
             @include breakpoint(sm) {
                 display: flex;
                 gap: $spacing-20;
+            }
+
+            .sub-menu {
+                display: none;
+                position: absolute;
+            }
+
+            .open {
+                .sub-menu {
+                    display: block;
+                }
             }
         }
     }
