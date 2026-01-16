@@ -15,13 +15,18 @@ $link_url                = $args['link_url'] ?? '';
 $link_target             = $args['link_target'] ?? '_self';
 $link_screen_reader_text = $args['link_screen_reader_text'] ?? '';
 $link_classes            = $args['link_classes'] ?? '';
+
+$attr = [
+    'class'      => $link_classes,
+    'href'       => $link_url,
+    'target'     => $link_target,
+];
+
 ?>
 
 <?php if ( ! empty( $link_text ) && ! empty( $link_url ) ) : ?>
 
-    <a class="<?php echo esc_attr( $link_classes ); ?>"
-    href="<?php echo esc_url( $link_url ); ?>"
-    target="<?php echo esc_attr( $link_target ); ?>">
+    <a <?php think_shift_attr( $attr ); ?>>
         <?php echo esc_html( $link_text ); ?>
         <?php if ( $link_screen_reader_text ) : ?>
             <span class="screen-reader-text"><?php echo esc_html( $link_screen_reader_text ); ?></span>

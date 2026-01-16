@@ -96,7 +96,7 @@
     "typography": {
       "customFontSize": false,
       "dropCap": false,
-      "fluid": true,
+      "fluid": false,
       "fontFamilies": [
         {
           "fontFace": [

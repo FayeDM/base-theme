@@ -1,0 +1,19 @@
+{
+    "name": "acf-blocks/tabs",
+    "title": "Tabs",
+    "description": "Accessible tab block for displaying panels of content",
+    "script": [ "file:./scripts.js" ],
+    "category": "think-shift-theme-blocks",
+    "icon": "open-folder",
+    "keywords": ["tabs"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "block.php"
+    },
+    "supports": {
+        "anchor": true
+    },
+	"editorScript": "file:index.js",
+	"editorStyle": "file:index.css",
+	"style": "file:style-index.css"
+}

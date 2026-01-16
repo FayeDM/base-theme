@@ -98,7 +98,7 @@ function think_shift_allowed_block_types( $allowed_block_types, $block_editor_co
 
     $blocks_dir = get_template_directory() . '/src/blocks';
 
-    $enable_sample_block = true; // toggle to enable sample block
+    $enable_sample_block = false; // toggle to enable sample block
 
     $block_folders = glob( $blocks_dir . '/*', GLOB_ONLYDIR );
 
@@ -127,10 +127,8 @@ add_filter( 'allowed_block_types_all', 'think_shift_allowed_block_types', 10, 2 
 
 
 
-
-
 /**
- * Append color classes for a block.
+ * Append color classes for an ACF block.
  *
  * @param array $block The ACF block array.
  * @return string Color classes string (space-prefixed).

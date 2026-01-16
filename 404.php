@@ -12,7 +12,7 @@ get_header();
 ?>
 
 <main id="main-content" class="is-layout-constrained">
-    <?php get_template_part( 'templates/content', '404' ); ?>
+    <?php get_template_part( 'content/content', '404' ); ?>
 </main>
 
 <?php get_footer(); ?>
